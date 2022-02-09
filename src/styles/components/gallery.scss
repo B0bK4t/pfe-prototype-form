@@ -1,0 +1,55 @@
+.h4 {
+    font-size: 110%;
+}
+
+.image-gallery {
+    display: none;
+    .is-editing & {
+        display: grid !important;
+    }
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 350px;
+    overflow-y: scroll;
+    gap: 5px 0;
+
+    h4 {
+        grid-column: span 2;
+    }
+
+    .item {
+        --dims: 170px;
+        width: var(--dims);
+        height: var(--dims);
+        margin: 0;
+        position: relative;
+
+        img {
+            width: var(--dims);
+            height: var(--dims);
+        }
+
+        .icon {
+            position: absolute;
+            z-index: 3;
+            // mix-blend-mode: difference;
+            right: 0;
+            top: 0;
+            color: black;
+            background: white;
+            border-radius: 100%;
+            padding: 2px;
+        }
+
+        .select {
+            position: absolute;
+            z-index: 3;
+            left: 0;
+            top: 0;
+            input {
+                --checkdims: 30px;
+                width: var(--checkdims);
+                height: var(--checkdims);
+            }
+        }
+    }
+}

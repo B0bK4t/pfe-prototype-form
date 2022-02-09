@@ -1,0 +1,200 @@
+.exercices {
+    // background: #d3d6e6;
+    width: 100%;
+    &.cats {
+        background: white;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    h1,
+    h2 {
+        text-align: center;
+    }
+
+    .search-bar {
+        background: #e9e9ed;
+        color: black;
+        margin: 4px;
+        width: 300px;
+        padding: 3px;
+        border: 1px solid black;
+        border-radius: 5px;
+        align-self: center;
+    }
+
+    .filtres-wrapper {
+        text-align: center;
+        padding: 10px;
+
+        .filtres {
+            form {
+                display: none;
+                input {
+                    margin-right: 3px;
+                    cursor: pointer;
+                }
+                .checks {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    gap: 3px;
+                    width: 100%;
+
+                    label {
+                        align-self: center;
+                        font-weight: bold;
+                    }
+                }
+            }
+            &.shown form {
+                display: flex;
+                flex-wrap: wrap;
+                text-align: left;
+                align-items: center;
+                margin-left: 10px;
+                h2 {
+                    text-align: left;
+                    margin: 3px 0;
+                }
+
+                @media screen and (min-width: 1000px) {
+                    flex-direction: row;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                }
+            }
+        }
+    }
+
+    .inputs {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        button {
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        max-width: 1000px !important;
+        padding: 5px;
+
+        .exercices-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    img {
+        max-width: 50%;
+    }
+}
+
+.single-exercice {
+    position: relative;
+
+    small {
+        margin: 10px 0;
+    }
+
+    img {
+        @media screen and (min-width: 1000px) {
+            position: absolute;
+            right: 0;
+            top: 10%;
+            max-width: 18%;
+        }
+    }
+
+    .desc {
+        max-width: 80%;
+    }
+
+    .origine {
+        margin-bottom: 30px;
+    }
+
+    h2,
+    h3 {
+        margin: 5px 0;
+    }
+
+    .exercice {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            @media screen and (min-width: 1000px) {
+                position: relative;
+                max-width: 18%;
+            }
+        }
+    }
+}
+
+.creer-ex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20vh;
+
+    h1 {
+        margin-bottom: 15px;
+    }
+
+    form {
+        .step {
+            display: flex;
+            gap: 15px;
+        }
+    }
+
+    p {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.cat-filtres section {
+    display: flex;
+    flex-direction: column;
+}
+
+.exercices-list {
+    gap: 3px;
+
+    .exercice {
+        border: 1px solid black;
+        border-collapse: collapse;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        padding: 3px;
+
+        &.hiddenF {
+            display: none;
+        }
+
+        &.hiddenS {
+            display: none;
+        }
+    }
+}

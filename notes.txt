@@ -1,0 +1,5 @@
+Affichage des vidéos, exercices avec filtres et de manière optimal pour la page de liste, mais aussi pour page d’ajout
+
+
+
+AT sauvegarde données -- images

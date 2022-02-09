@@ -1,0 +1,151 @@
+.form {
+    &:hover {
+        color: inherit;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .cats {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filtres {
+        .ajouter {
+            margin: 10px 0;
+        }
+
+        input {
+            margin-right: 3px;
+            cursor: pointer;
+        }
+    }
+
+    .category {
+        align-self: flex-start;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    .img {
+        input {
+            padding-left: 10%;
+        }
+    }
+
+    .submit {
+        input {
+            padding: 15px;
+        }
+    }
+
+    .button {
+        background: #e9e9ed;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .checks {
+        div {
+            .creer-cat & {
+                max-height: 25vh;
+                // overflow-y: scroll;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 3px;
+
+                &:last-of-type {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+.modal form {
+    display: none;
+
+    .inProgress & {
+        display: block;
+    }
+}
+
+.single-form {
+    textarea,
+    input,
+    label,
+    .inputEquivalent {
+        display: none;
+        max-width: 100%;
+
+        .is-editing & {
+            display: block;
+
+            &.cats {
+                display: flex;
+            }
+        }
+    }
+
+    .inputEquivalent {
+        label {
+            font-weight: bold;
+        }
+        .checks {
+            .innerChecks {
+                display: flex;
+                label {
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+
+    .toHide {
+        .is-editing & {
+            display: none;
+        }
+    }
+
+    .close svg {
+        --dims: 5rem;
+        height: var(--dims);
+        width: var(--dims);
+    }
+
+    .edit {
+        .is-editing & {
+            display: none;
+        }
+    }
+
+    .close {
+        display: none;
+
+        .is-editing & {
+            display: block;
+        }
+    }
+
+    .wp-editor-tools {
+        display: none;
+    }
+
+    #wp-postcontent-editor-container {
+        display: none;
+        .is-editing & {
+            display: block;
+        }
+    }
+}

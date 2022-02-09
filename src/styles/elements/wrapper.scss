@@ -1,0 +1,5 @@
+.wrapper {
+    max-width: $breakpoint-md;
+    width: calc(100% - var(--spacing-md));
+    margin: 0 auto;
+}

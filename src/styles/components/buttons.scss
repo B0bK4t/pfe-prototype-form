@@ -1,0 +1,46 @@
+.button {
+    background: #e9e9ed;
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+
+    div & {
+        display: flex;
+        justify-content: center;
+    }
+
+    cursor: pointer;
+}
+
+.details {
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: var(--color-primary);
+    color: white;
+
+    &:hover {
+        color: rgb(150, 150, 150);
+        text-decoration: underline;
+        background: rgb(5, 5, 119);
+    }
+}
+
+.plus {
+    max-width: 80px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.edit svg {
+    --dims: 5.5rem;
+    height: var(--dims);
+    width: var(--dims);
+}
+
+button {
+    cursor: pointer;
+}
